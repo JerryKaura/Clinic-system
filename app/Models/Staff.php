@@ -8,13 +8,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Staff
  * @package App\Models
- * @version February 5, 2020, 12:59 pm UTC
+ * @version February 5, 2020, 1:23 pm UTC
  *
  * @property string name
  * @property string email
  * @property string phone
  * @property string gender
- * @property integer user_id
+ * @property integer id_number
+ * @property string hospital
  * @property boolean status
  */
 class Staff extends Model
@@ -36,7 +37,8 @@ class Staff extends Model
         'email',
         'phone',
         'gender',
-        'user_id',
+        'id_number',
+        'hospital',
         'status'
     ];
 
@@ -51,7 +53,8 @@ class Staff extends Model
         'email' => 'string',
         'phone' => 'string',
         'gender' => 'string',
-        'user_id' => 'integer',
+        'id_number' => 'integer',
+        'hospital' => 'string',
         'status' => 'boolean'
     ];
 
@@ -65,7 +68,8 @@ class Staff extends Model
         'email' => 'required',
         'phone' => 'required',
         'gender' => 'required',
-        'user_id' => 'required',
+        'id_number' => 'required',
+        'hospital' => 'required',
         'status' => 'required'
     ];
 

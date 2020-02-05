@@ -31,9 +31,10 @@ class StaffController extends AppBaseController
     public function index(Request $request)
     {
         $staff = $this->staffRepository->all();
-        $hospital = Hospital::all();
+        $hospitals = Hospital::all();
 
-        return view('staff.index')
+        
+        return view('staff.index',compact('hospitals'))
             ->with('staff', $staff);
     }
 

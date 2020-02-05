@@ -20,7 +20,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->middleware('verified');
 
-Route::resource('patients', 'PatientsController');
+Route::resource('patients', 'PatientController');
 
 Route::resource('staff', 'StaffController');
 
@@ -32,6 +32,6 @@ Route::resource('notifications', 'NotificationsController');
 
 Route::resource('appointments', 'AppointmentsController');
 
-Route::resource('users', 'UsersController');
+Route::resource('users', 'UserController');
 
 Route::resource('hospitals', 'HospitalController');

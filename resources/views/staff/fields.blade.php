@@ -42,9 +42,9 @@
                 <div class="form-group col-sm-6">
                     {!! Form::label('hospital', 'Hospital:') !!}
 
-                    <select name="hospital_id" id="hospital_id" class="form-control">
+                    <select name="hospital" id="hospital" class="form-control">
                         <option value="">Select Hospital</option>
-                        @foreach($staff as $hospital)
+                        @foreach($hospitals as $hospital)
                         <option value="{{$hospital->id}}">{{$hospital->name}}</option>
                         @endforeach
                     </select>
@@ -52,8 +52,8 @@
 
                 <!-- User Id Field -->
                 <div class="form-group col-sm-6">
-                    {!! Form::label('user_id', 'User Id:') !!}
-                    {!! Form::number('user_id', null, ['class' => 'form-control']) !!}
+                    {!! Form::label('id number', 'User Id:') !!}
+                    {!! Form::number('id number', null, ['class' => 'form-control']) !!}
                 </div>
 
                 <!-- Status Field -->
@@ -68,8 +68,8 @@
                 <div class="modal-footer">
                     <!-- Submit Field -->
                     <div class="form-group col-sm-12">
-                        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                        <a href="{{ route('staff.index') }}" class="btn btn-default">Cancel</a>
+                        {!! Form::submit('Save', ['class' => 'btn btn-success']) !!}
+                        <a href="{{ route('staff.index') }}" class="btn btn-warning">Cancel</a>
                     </div>
                 </div>
          </div>

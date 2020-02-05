@@ -6,7 +6,8 @@
         <th>Email</th>
         <th>Phone</th>
         <th>Gender</th>
-        <th>User Id</th>
+        <th>Id Number</th>
+        <th>Hospital</th>
         <th>Status</th>
                 <th colspan="3">Action</th>
             </tr>
@@ -18,7 +19,8 @@
             <td>{{ $staff->email }}</td>
             <td>{{ $staff->phone }}</td>
             <td>{{ $staff->gender }}</td>
-            <td>{{ $staff->user_id }}</td>
+            <td>{{ $staff->id_number }}</td>
+            <td>{{ $staff->hospital }}</td>
             <td>{{ $staff->status }}</td>
                 <td>
                     {!! Form::open(['route' => ['staff.destroy', $staff->id], 'method' => 'delete']) !!}

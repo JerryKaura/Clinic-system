@@ -13,7 +13,8 @@ $factory->define(Staff::class, function (Faker $faker) {
         'phone' => $faker->word,
         'gender' => $faker->word,
         'deleted_at' => $faker->date('Y-m-d H:i:s'),
-        'user_id' => $faker->randomDigitNotNull,
+        'id_number' => $faker->randomDigitNotNull,
+        'hospital' => $faker->word,
         'status' => $faker->word,
         'created_at' => $faker->date('Y-m-d H:i:s'),
         'updated_at' => $faker->date('Y-m-d H:i:s')

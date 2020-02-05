@@ -20,7 +20,8 @@ class CreateStaffTable extends Migration
             $table->string('phone');
             $table->string('gender');    
             $table->softDeletes();
-            $table->integer('user_id');
+            $table->integer('id_number');
+            $table->string('hospital');
             $table->tinyInteger('status');
             $table->timestamps();
         });

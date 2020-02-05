@@ -22,10 +22,16 @@
     <p>{{ $staff->gender }}</p>
 </div>
 
-<!-- User Id Field -->
+<!-- Id Number Field -->
 <div class="form-group">
-    {!! Form::label('user_id', 'User Id:') !!}
-    <p>{{ $staff->user_id }}</p>
+    {!! Form::label('id_number', 'Id Number:') !!}
+    <p>{{ $staff->id_number }}</p>
+</div>
+
+<!-- Hospital Field -->
+<div class="form-group">
+    {!! Form::label('hospital', 'Hospital:') !!}
+    <p>{{ $staff->hospital }}</p>
 </div>
 
 <!-- Status Field -->

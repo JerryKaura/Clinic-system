@@ -4,7 +4,7 @@
     <section class="content-header">
         <h1 class="pull-left">Staff</h1>
         <h1 class="pull-right">
-            <a data-toggle="modal" data-target="#staff-show" class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px">Add New</a>
+            <a data-toggle="modal" data-target="#staff-show" class="btn btn-success pull-right" style="margin-top: -10px;margin-bottom: 5px">Add New</a>
             <a href="" data-toggle="modal" data-target=""></a>
         </h1>
     </section>

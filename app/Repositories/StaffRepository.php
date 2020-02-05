@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class StaffRepository
  * @package App\Repositories
- * @version February 5, 2020, 12:59 pm UTC
+ * @version February 5, 2020, 1:23 pm UTC
 */
 
 class StaffRepository extends BaseRepository
@@ -21,7 +21,8 @@ class StaffRepository extends BaseRepository
         'email',
         'phone',
         'gender',
-        'user_id',
+        'id_number',
+        'hospital',
         'status'
     ];
 
