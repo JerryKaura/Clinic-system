@@ -6,22 +6,18 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Staff
+ * Class Hospital
  * @package App\Models
  * @version February 5, 2020, 12:59 pm UTC
  *
  * @property string name
- * @property string email
- * @property string phone
- * @property string gender
- * @property integer user_id
- * @property boolean status
+ * @property string subcounty
  */
-class Staff extends Model
+class Hospital extends Model
 {
     use SoftDeletes;
 
-    public $table = 'staff';
+    public $table = 'hospitals';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -33,11 +29,7 @@ class Staff extends Model
 
     public $fillable = [
         'name',
-        'email',
-        'phone',
-        'gender',
-        'user_id',
-        'status'
+        'subcounty'
     ];
 
     /**
@@ -48,11 +40,7 @@ class Staff extends Model
     protected $casts = [
         'id' => 'integer',
         'name' => 'string',
-        'email' => 'string',
-        'phone' => 'string',
-        'gender' => 'string',
-        'user_id' => 'integer',
-        'status' => 'boolean'
+        'subcounty' => 'string'
     ];
 
     /**
@@ -62,11 +50,7 @@ class Staff extends Model
      */
     public static $rules = [
         'name' => 'required',
-        'email' => 'required',
-        'phone' => 'required',
-        'gender' => 'required',
-        'user_id' => 'required',
-        'status' => 'required'
+        'subcounty' => 'required'
     ];
 
     

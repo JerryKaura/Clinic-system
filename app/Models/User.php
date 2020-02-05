@@ -6,22 +6,23 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Staff
+ * Class User
  * @package App\Models
- * @version February 5, 2020, 12:59 pm UTC
+ * @version February 5, 2020, 12:58 pm UTC
  *
  * @property string name
+ * @property integer role
  * @property string email
- * @property string phone
- * @property string gender
- * @property integer user_id
- * @property boolean status
+ * @property string|\Carbon\Carbon email_verified_at
+ * @property string password
+ * @property string image
+ * @property string remember_token
  */
-class Staff extends Model
+class User extends Model
 {
     use SoftDeletes;
 
-    public $table = 'staff';
+    public $table = 'users';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -33,11 +34,12 @@ class Staff extends Model
 
     public $fillable = [
         'name',
+        'role',
         'email',
-        'phone',
-        'gender',
-        'user_id',
-        'status'
+        'email_verified_at',
+        'password',
+        'image',
+        'remember_token'
     ];
 
     /**
@@ -48,11 +50,12 @@ class Staff extends Model
     protected $casts = [
         'id' => 'integer',
         'name' => 'string',
+        'role' => 'integer',
         'email' => 'string',
-        'phone' => 'string',
-        'gender' => 'string',
-        'user_id' => 'integer',
-        'status' => 'boolean'
+        'email_verified_at' => 'datetime',
+        'password' => 'string',
+        'image' => 'string',
+        'remember_token' => 'string'
     ];
 
     /**
@@ -62,11 +65,9 @@ class Staff extends Model
      */
     public static $rules = [
         'name' => 'required',
+        'role' => 'required',
         'email' => 'required',
-        'phone' => 'required',
-        'gender' => 'required',
-        'user_id' => 'required',
-        'status' => 'required'
+        'password' => 'required'
     ];
 
     

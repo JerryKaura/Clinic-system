@@ -33,3 +33,5 @@ Route::resource('notifications', 'NotificationsController');
 Route::resource('appointments', 'AppointmentsController');
 
 Route::resource('users', 'UsersController');
+
+Route::resource('hospitals', 'HospitalController');

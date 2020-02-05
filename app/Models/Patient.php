@@ -6,22 +6,26 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Staff
+ * Class Patient
  * @package App\Models
  * @version February 5, 2020, 12:59 pm UTC
  *
  * @property string name
- * @property string email
- * @property string phone
+ * @property integer id_number
+ * @property string bloodgroup
  * @property string gender
- * @property integer user_id
+ * @property string phone
+ * @property string email
+ * @property string dob
+ * @property string address
+ * @property string guardian
  * @property boolean status
  */
-class Staff extends Model
+class Patient extends Model
 {
     use SoftDeletes;
 
-    public $table = 'staff';
+    public $table = 'patients';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -33,10 +37,14 @@ class Staff extends Model
 
     public $fillable = [
         'name',
-        'email',
-        'phone',
+        'id_number',
+        'bloodgroup',
         'gender',
-        'user_id',
+        'phone',
+        'email',
+        'dob',
+        'address',
+        'guardian',
         'status'
     ];
 
@@ -48,10 +56,14 @@ class Staff extends Model
     protected $casts = [
         'id' => 'integer',
         'name' => 'string',
-        'email' => 'string',
-        'phone' => 'string',
+        'id_number' => 'integer',
+        'bloodgroup' => 'string',
         'gender' => 'string',
-        'user_id' => 'integer',
+        'phone' => 'string',
+        'email' => 'string',
+        'dob' => 'string',
+        'address' => 'string',
+        'guardian' => 'string',
         'status' => 'boolean'
     ];
 
@@ -62,10 +74,14 @@ class Staff extends Model
      */
     public static $rules = [
         'name' => 'required',
-        'email' => 'required',
-        'phone' => 'required',
+        'id_number' => 'required',
+        'bloodgroup' => 'required',
         'gender' => 'required',
-        'user_id' => 'required',
+        'phone' => 'required',
+        'email' => 'required',
+        'dob' => 'required',
+        'address' => 'required',
+        'guardian' => 'required',
         'status' => 'required'
     ];
 

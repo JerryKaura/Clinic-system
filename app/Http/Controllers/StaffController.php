@@ -9,6 +9,7 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use App\Models\Hospital;
 
 class StaffController extends AppBaseController
 {
@@ -30,6 +31,7 @@ class StaffController extends AppBaseController
     public function index(Request $request)
     {
         $staff = $this->staffRepository->all();
+        $hospital = Hospital::all();
 
         return view('staff.index')
             ->with('staff', $staff);
